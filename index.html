@@ -19,11 +19,14 @@
         <h1>ohmyfood</h1>
     </header>
     <main>
-        <div class="city">
-            <p>Paris, Belleville</p>
-            <i class="fa-solid fa-location-dot"></i>
-
-        </div>
+        <form class="city" onsubmit="return false;">
+            <div class="city-search">
+                <div class="city-search-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <input type="text" placeholder="Paris, Belleville" class="city-search-input">
+            </div>
+        </form>
         <div class="infos">
             <h2>Réserver le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>

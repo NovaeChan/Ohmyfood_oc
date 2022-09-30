@@ -1,0 +1,8 @@
+header {
+    height: 55px;
+    box-shadow: 4px 3px 5px rgb(182, 182, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include background;
+}

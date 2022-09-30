@@ -1,17 +1,13 @@
 @import './utils/variables.scss';
-
-$margin: 15px;
-$medium-margin: 25px;
-$big-margin: 50px;
-$padding: 30px;
-
-
+@import './base/base';
+@import './components/buttons';
+@import './layouts/header.scss';
+@import './layouts/footer';
 
 $heading-shadow-size: .55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25;
 
-@import './base/base';
 
 a{
     color: black;
@@ -37,22 +33,32 @@ h2 {
     font-size: 25px;
 }
 
-@import './layouts/header.scss';
 
 .city {
     height: 50px;
+    width: 100%;
     background-color: rgba(235,235,234,255);
     margin-top: 3px;
-    color: rgb(75, 75, 75);
+    color: rgb(53, 53, 53);
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    .fa-location-dot{
-        position:relative;
-        left: -35%;
+    &-search{
+        display: inline-flex;
+        text-align: center;
     }
-
+    &-search-input{
+        background-color: rgba(235,235,234,255);
+        border: none;
+        font-weight: 700;
+        font-size: 17px;
+        text-align: center;
+        width: 150px;
+        &::placeholder{
+            color: lighten(black, 20);
+        }
+    }
 }
 
 .fa-solid{
@@ -78,18 +84,6 @@ h2 {
     }
 }
 
-button {
-    margin-top: $margin;
-    margin-bottom: $big-margin;
-    font-size: 17px;
-    color: rgb(255, 255, 255);
-    padding: 15px;
-    border-radius: 35px;
-    background-image: linear-gradient(rgb(255, 121, 218) 0%, rgb(147, 86, 220) 95%, rgb(147, 86, 220) 100%);
-    box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 8px 0px;
-    border: 0px solid rgb(28, 110, 164);
-    display: inline-block;
-}
 
 .guide {
     @include padding;
@@ -199,25 +193,10 @@ button {
         justify-content: space-between;
         align-items: center;
     }
+    &-favorite{
+        height: 20px;
+    }
 }
 
 
-footer{
-    @include padding;
-    background-color: rgb(65, 64, 64);
-    color: white;
-    h1{
-        font-size: 21px;
-        text-align: left;
-        margin-bottom: $margin;
-    }
-    .fa-ul{
-        margin-left: 25px;
-    }
-    .fa-ul>li{
-        padding: 3px;
-    }
-    .fa-li{
-        top: -2px;
-    }
-}
+//Keyfram pour les animations

@@ -1,0 +1,19 @@
+footer{
+    @include padding;
+    background-color: rgb(65, 64, 64);
+    color: white;
+    h1{
+        font-size: 21px;
+        text-align: left;
+        margin-bottom: $margin;
+    }
+    .fa-ul{
+        margin-left: 25px;
+    }
+    .fa-ul>li{
+        padding: 3px;
+    }
+    .fa-li{
+        top: -2px;
+    }
+}
