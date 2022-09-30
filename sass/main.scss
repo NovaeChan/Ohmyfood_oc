@@ -5,22 +5,13 @@ $medium-margin: 25px;
 $big-margin: 50px;
 $padding: 30px;
 
-@mixin background {
-    background-color: white;
-}
-@mixin padding {
-    padding: 20px 20px;
-}
+
 
 $heading-shadow-size: .55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25;
 
-*,*::after,::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import './base/base';
 
 a{
     color: black;
@@ -46,14 +37,7 @@ h2 {
     font-size: 25px;
 }
 
-header {
-    height: 55px;
-    box-shadow: 4px 3px 5px rgb(182, 182, 182);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include background;
-}
+@import './layouts/header.scss';
 
 .city {
     height: 50px;
