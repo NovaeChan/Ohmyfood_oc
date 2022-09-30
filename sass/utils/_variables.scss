@@ -5,3 +5,12 @@ $colour-tertiary: #99E2D0;
 $font-text: 'Roboto', sans-serif;
 $font-title: 'Shrikhand', cursive;
 $dot-ol-size: 24px;
+
+//Mixins
+
+@mixin background {
+    background-color: white;
+}
+@mixin padding {
+    padding: 20px 20px;
+}
