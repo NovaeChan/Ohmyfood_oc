@@ -10,6 +10,16 @@ $margin: 15px;
 $medium-margin: 25px;
 $big-margin: 50px;
 $padding: 30px;
+
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;
+
+$breakpoints : (
+    tablet: 768px,
+    desktop: 992px,
+);
+
 //Mixins
 
 @mixin background {
@@ -17,4 +27,10 @@ $padding: 30px;
 }
 @mixin padding {
     padding: 20px 20px;
+}
+
+@mixin tablet-only{
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
 }
