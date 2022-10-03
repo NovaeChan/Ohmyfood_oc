@@ -231,5 +231,11 @@ h2 {
 .card-favorite {
   height: 20px;
 }
+.card-favorite .fa-heart:hover {
+  background: linear-gradient(rgb(147, 86, 220) 0%, rgb(255, 121, 218) 95%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
 
 /*# sourceMappingURL=style.css.map */
