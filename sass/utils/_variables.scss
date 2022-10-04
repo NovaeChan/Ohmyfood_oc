@@ -34,3 +34,9 @@ $breakpoints : (
         @content;
     }
 }
+
+@mixin desktop-only{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)){
+        @content;
+    }
+}

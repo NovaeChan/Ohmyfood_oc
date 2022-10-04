@@ -23,6 +23,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-color: white;
 }
 header a {
@@ -58,7 +59,7 @@ a {
 body {
   margin: auto;
   width: 100%;
-  max-width: 1300px;
+  max-width: 968px;
   background-color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
 }
@@ -263,9 +264,15 @@ h2 {
 
 .img-restaurant {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
   background-size: 400px;
   height: 250px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .img-restaurant {
+    background-size: 100%;
+  }
 }
 
 .menu {
@@ -281,14 +288,21 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+.menu-title-desc {
+  width: 100%;
+}
 .menu-card {
+  width: 100%;
+  position: relative;
   height: 65px;
   border-radius: 15px;
   box-shadow: 0px 5px 10px rgb(187, 187, 187);
   padding: 10px;
   margin-bottom: 10px;
+  display: flex;
 }
 .menu-card-description {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -297,6 +311,9 @@ h2 {
 }
 .menu-card span {
   overflow: hidden;
+}
+.menu-card-select {
+  width: 0px;
 }
 .menu-button {
   display: flex;
@@ -310,6 +327,37 @@ h2 {
 }
 .menu h4 {
   margin-bottom: 5px;
+}
+.menu-card-select {
+  position: absolute;
+  right: 0px;
+  top: 0%;
+  background-color: #99E2D0;
+  width: 0px;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.5);
+  transition: transform 330ms ease-in-out;
+}
+.menu-card-select span {
+  transform: translateY(250%);
+  transition: transform 280ms ease-out 50ms;
+  display: block;
+}
+.menu-card:hover > .menu-card-select {
+  transform: scale(1);
+  color: red;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+}
+.menu-card:hover > .menu-card-select span {
+  transform: translateY(0);
+}
+.menu-card:hover > .menu-card-select + .menu-title-desc {
+  width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
