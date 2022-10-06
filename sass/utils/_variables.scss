@@ -40,3 +40,17 @@ $breakpoints : (
         @content;
     }
 }
+
+//Webkit
+
+@keyframes like {
+    0%   { transform: scale(1); }
+    90%   { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes card-hover {
+    0% { transform: scalex(1.0) scaleY(2); }
+    10% { transform: scalex(1.5) scaleY(3);}
+    100% { transform: scalex(2) scaleY(4);}
+}

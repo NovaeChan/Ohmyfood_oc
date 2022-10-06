@@ -1,3 +1,25 @@
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes card-hover {
+  0% {
+    transform: scalex(1) scaleY(2);
+  }
+  10% {
+    transform: scalex(1.5) scaleY(3);
+  }
+  100% {
+    transform: scalex(2) scaleY(4);
+  }
+}
 *, *::after, ::before {
   box-sizing: border-box;
   margin: 0;
@@ -49,6 +71,9 @@ footer .fa-ul > li {
 }
 footer .fa-li {
   top: -2px;
+}
+footer a {
+  color: white;
 }
 
 a {
@@ -260,6 +285,7 @@ h2 {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   cursor: pointer;
+  animation: like 0.5s 1;
 }
 
 .img-restaurant {
@@ -299,7 +325,6 @@ h2 {
   box-shadow: 0px 5px 10px rgb(187, 187, 187);
   padding: 10px;
   margin-bottom: 10px;
-  display: flex;
 }
 .menu-card-description {
   width: 100%;
@@ -309,8 +334,12 @@ h2 {
 .menu-card-price {
   font-weight: 900;
 }
-.menu-card span {
+.menu-card p {
+  font-size: 15px;
+  width: 270px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card-select {
   width: 0px;
@@ -333,31 +362,21 @@ h2 {
   right: 0px;
   top: 0%;
   background-color: #99E2D0;
-  width: 0px;
   border-radius: 0px 10px 10px 0px;
+  width: 10px;
+  height: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.5);
-  transition: transform 330ms ease-in-out;
-}
-.menu-card-select span {
-  transform: translateY(250%);
-  transition: transform 280ms ease-out 50ms;
-  display: block;
+  transform-origin: right;
+  transform: scale(1);
+  transition: transform 330ms ease;
+  opacity: 1;
 }
 .menu-card:hover > .menu-card-select {
-  transform: scale(1);
-  color: red;
-  width: 15%;
-  height: 100%;
-  text-align: center;
-}
-.menu-card:hover > .menu-card-select span {
-  transform: translateY(0);
-}
-.menu-card:hover > .menu-card-select + .menu-title-desc {
-  width: 70%;
+  animation: card-hover 1000ms ease;
+  animation-fill-mode: both;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

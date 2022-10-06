@@ -212,6 +212,7 @@ h2 {
 .fa-xl{
     line-height: 1em;
 }
+
 .fa-heart:hover{
     // background: linear-gradient(rgb(147, 86, 220) 0%, rgb(255, 121, 218) 95%, rgb(147, 86, 220) 100%);
     background: linear-gradient(rgb(147, 86, 220) 0%, rgb(255, 121, 218) 95%, rgb(147, 86, 220) 100%);
@@ -219,9 +220,7 @@ h2 {
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     cursor: pointer;
-    // font: {
-    //     size: 20vw;
-    // };
+    animation: like 0.5s 1;
 }
 
 .img-restaurant{
@@ -259,7 +258,6 @@ h2 {
         box-shadow: 0px 5px 10px rgb(187, 187, 187);
         padding: 10px;
         margin-bottom: 10px;
-        display: flex;
         &-description{
             width: 100%;
             display: flex;
@@ -268,8 +266,12 @@ h2 {
         &-price{
             font-weight: 900;
         }
-        span{
+        p{
+            font-size: 15px;
+            width: 270px;
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
         &-select{
             width: 0px;
@@ -293,31 +295,26 @@ h2 {
         right: 0px;
         top: 0%;
         background-color: $colour-tertiary;
-        width: 0px;
         border-radius: 0px 10px 10px 0px;
+        width: 10px;
+        height: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: scale(.5);
-        transition: transform 330ms ease-in-out;
-        span {
-            transform: translateY(250%);
-            transition: transform 280ms ease-out 50ms;
-            display: block;
-        }
+        transform-origin: right;
+        transform: scale(1.0);
+        transition: transform 330ms ease;
+        opacity: 1;
+        // span {
+        //     transform: translateY(250%);
+        //     transition: transform 280ms ease-out 50ms;
+        //     display: block;
+        // }
     }
     &-card:hover > .menu-card-select{
-        transform: scale(1);
-        color: red;
-        width: 15%;
-        height: 100%;
-        text-align: center;
-        span {
-            transform: translateY(0);
-        }
-        + .menu-title-desc{
-            width: 70%;
-        }
+        animation: card-hover 1000ms ease;
+        animation-fill-mode: both;
+        opacity: 1;
     }
 }
 
