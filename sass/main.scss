@@ -304,8 +304,8 @@ h2 {
         align-items: center;
         justify-content: center;
         transform-origin: right;
-        transform: scale(1.0);
-        transition: transform 330ms ease;
+        // transform: scale(1.0);
+        // transition: transform 330ms ease;
     }
     &-card:hover > .menu-card-select{
         animation: card-hover 1000ms ease;

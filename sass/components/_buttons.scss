@@ -9,5 +9,29 @@ button {
     box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 8px 0px;
     border: 0px solid rgb(28, 110, 164);
     display: inline-block;
-
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content: "";
+        border-radius: 35px;
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(lighten($colour-secondary, 5%), lighten($colour-primary, 5%), lighten($colour-primary, 5%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 8px 0px;
+        -webkit-box-shadow: 9px 9px 15px 2px rgba(0,0,0,0.35); 
+        box-shadow: 9px 9px 15px 2px rgba(0,0,0,0.35);
+    }
 }
