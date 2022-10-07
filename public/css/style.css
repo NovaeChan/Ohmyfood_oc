@@ -430,4 +430,40 @@ h2 {
   font-size: 22px;
 }
 
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes card-hover {
+  0% {
+    right: -90px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes rotation-span {
+  0% {
+    rotate: 90deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes card-hover-desc {
+  0% {
+    width: 99%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
