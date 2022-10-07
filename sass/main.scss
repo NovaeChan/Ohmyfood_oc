@@ -258,6 +258,8 @@ h2 {
         box-shadow: 0px 5px 10px rgb(187, 187, 187);
         padding: 10px;
         margin-bottom: 10px;
+        overflow: hidden;
+        cursor: pointer;
         &-description{
             width: 100%;
             display: flex;
@@ -292,29 +294,39 @@ h2 {
     }
     &-card-select{
         position: absolute;
-        right: 0px;
+        right: -100px;
         top: 0%;
         background-color: $colour-tertiary;
         border-radius: 0px 10px 10px 0px;
-        width: 10px;
-        height: 10px;
+        width: 60px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         transform-origin: right;
         transform: scale(1.0);
         transition: transform 330ms ease;
-        opacity: 1;
-        // span {
-        //     transform: translateY(250%);
-        //     transition: transform 280ms ease-out 50ms;
-        //     display: block;
-        // }
     }
     &-card:hover > .menu-card-select{
         animation: card-hover 1000ms ease;
         animation-fill-mode: both;
-        opacity: 1;
+        span{
+            animation: rotation-span 1000ms ease;
+            animation-fill-mode: both;
+        }
+    }
+    &-title-desc{
+        transform: scale(1.0);
+        transition: transform 330ms ease;
+        transform-origin: left;
+    }
+    &-card:hover > .menu-title-desc{
+        animation: card-hover-desc 1000ms ease;
+        animation-fill-mode: both;
+    }
+    .fa-circle-check{
+        color: white;
+        font-size: 22px;
     }
 }
 

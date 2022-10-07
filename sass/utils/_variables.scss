@@ -50,7 +50,16 @@ $breakpoints : (
 }
 
 @keyframes card-hover {
-    0% { transform: scalex(1.0) scaleY(2); }
-    10% { transform: scalex(1.5) scaleY(3);}
-    100% { transform: scalex(2) scaleY(4);}
+    0% { right: -90px; }
+    100% { right: 0px;}
+}
+
+@keyframes rotation-span {
+    0% { rotate: (90deg);}
+    100% { rotate: (360deg); }
+}
+
+@keyframes card-hover-desc {
+    0% { width: 99%;}
+    100% { width: 80%;}
 }
