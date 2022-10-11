@@ -1,38 +1,3 @@
-@keyframes like {
-  0% {
-    transform: scale(1);
-  }
-  90% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-@keyframes card-hover {
-  0% {
-    right: -90px;
-  }
-  100% {
-    right: 0px;
-  }
-}
-@keyframes rotation-span {
-  0% {
-    rotate: 90deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-@keyframes card-hover-desc {
-  0% {
-    width: 99%;
-  }
-  100% {
-    width: 80%;
-  }
-}
 *, *::after, ::before {
   box-sizing: border-box;
   margin: 0;
@@ -73,6 +38,22 @@ button::after {
   box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 8px 0px;
   -webkit-box-shadow: 9px 9px 15px 2px rgba(0, 0, 0, 0.35);
   box-shadow: 9px 9px 15px 2px rgba(0, 0, 0, 0.35);
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 header {
@@ -121,8 +102,12 @@ body {
   margin: auto;
   width: 100%;
   max-width: 968px;
-  background-color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  animation: loading 0ms 2500ms both;
 }
 
 h1 {
@@ -286,9 +271,12 @@ h2 {
 }
 .card-img {
   border-radius: 15px 15px 0px 0px;
-  height: 175px; /*1*/
-  position: relative; /*2*/
-  overflow: hidden; /*3*/
+  height: 175px;
+  /*1*/
+  position: relative;
+  /*2*/
+  overflow: hidden;
+  /*3*/
 }
 .card-img img {
   width: 100%;
@@ -303,7 +291,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-.card-body-name h3, .card-body-name span {
+.card-body-name h3,
+.card-body-name span {
   padding: 5px;
 }
 .card-favorite {
@@ -463,6 +452,22 @@ h2 {
   }
   100% {
     width: 80%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
