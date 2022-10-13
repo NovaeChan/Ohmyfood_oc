@@ -13,52 +13,53 @@ a {
 }
 
 body {
-    margin: auto;
-    width: 100%;
-    max-width: 968px;
+    @include centered-block;
+    width: 100%; //mixin/variable 
+    max-width: 986px;
     font-family: $font-text;
 }
 
 .container {
-    background-color: #ffffff;
+    width: 100%; //mixin/variable 
+    background-color: #ffffff; //mixin/variable 
     animation: loading 0ms $prog-bar-duration + $prog-bar-delay both;
 }
 
 h1 {
     font-family: $font-title;
-    text-align: center;
+    text-align: center; //mixin/variable 
 }
 
 h2 {
     margin-top: $margin;
-    font-weight: 900;
+    font-weight: 900; //mixin/variable 
     margin-bottom: $margin;
-    font-size: 25px;
+    font-size: 25px; //mixin/variable 
 }
 
 
 .city {
     height: 50px;
-    width: 100%;
-    background-color: rgba(235, 235, 234, 255);
+    width: 100%; //mixin/variable 
+    background-color: rgba(235, 235, 234, 255); //mixin/variable 
     margin-top: 2px;
     color: rgb(53, 53, 53);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
+    display: flex; //mixin/variable 
+    justify-content: center; //mixin/variable 
+    align-items: center; //mixin/variable 
+    font-weight: 700; //mixin/variable 
 
     &-search {
-        display: inline-flex;
-        text-align: center;
+        display: inline-flex; //mixin/variable 
+        text-align: center; //mixin/variable 
     }
 
     &-search-input {
-        background-color: rgba(235, 235, 234, 255);
+        background-color: rgba(235, 235, 234, 255); //mixin/variable 
         border: none;
-        font-weight: 700;
-        font-size: 17px;
-        text-align: center;
+        font-weight: 700; //mixin/variable 
+        font-size: 17px; //mixin/variable 
+        text-align: center; //mixin/variable 
         width: 150px;
 
         &::placeholder {
@@ -74,21 +75,24 @@ h2 {
 .infos {
     background-color: rgba(247, 247, 246, 255); // variable/mixin
     padding: 20px 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-
+    display: flex; //mixin/variable 
+    flex-wrap: wrap; //mixin/variable 
+    justify-content: center; //mixin/variable 
+    align-items: center; //mixin/variable 
+    text-align: center; //mixin/variable 
+    @include centered-block;
+    @include desktop-only{
+        border-radius: 0px 0px 30px 30px;
+    }
     h2 {
-        padding: 0px 30px;
+        font-size: 20px;
+        padding: 0px 30px 0px 30px ;
     }
 
     p {
-        font-size: 17px;
+        font-size: 17px; //mixin/variable 
         font-weight: 200;
-        margin-bottom: $margin;
+        margin-bottom: $margin; //mixin/variable 
     }
 
     @include tablet-only {
@@ -99,8 +103,8 @@ h2 {
 
 .guide {
     @include padding;
-    margin-bottom: $medium-margin;
-    font-weight: 700;
+    margin-bottom: $medium-margin; //mixin/variable 
+    font-weight: 700; //mixin/variable 
 
     ol {
         margin-top: $medium-margin;
@@ -111,16 +115,16 @@ h2 {
     }
 
     &-list li {
-        width: 100%;
-        padding: 20px;
+        width: 100%; //mixin/variable 
+        padding: 20px; //mixin/variable 
         counter-increment: my-counter;
-        position: relative;
-        background-color: rgba(247, 247, 246, 255);
-        border-radius: 20px;
+        position: relative; //mixin/variable 
+        background-color: rgba(247, 247, 246, 255); //mixin/variable 
+        border-radius: 20px; //mixin/variable 
         box-shadow: rgba(114, 113, 113, 0.44) 2px 5px 8px 0px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
+        margin-bottom: 20px; //mixin/variable 
+        display: flex; //mixin/variable 
+        justify-content: space-around; //mixin/variable 
     }
 
     &-list li::before {
@@ -129,11 +133,11 @@ h2 {
         border-radius: 50%;
         width: $dot-ol-size;
         height: $dot-ol-size;
-        color: white;
+        color: white; //mixin/variable 
         font-weight: 500;
         position: absolute;
         top: 10;
-        text-align: center;
+        text-align: center; //mixin/variable 
         line-height: $dot-ol-size;
         font-size: 13px;
         left: calc(-1 * $dot-ol-size + 9px);
@@ -148,9 +152,9 @@ h2 {
     }
 
     &-list a {
-        width: 100%;
-        display: flex;
-        align-items: center;
+        width: 100%; //mixin/variable 
+        display: flex; //mixin/variable 
+        align-items: center; //mixin/variable 
     }
 
     &-list .fa-solid {
@@ -162,7 +166,7 @@ h2 {
     @include tablet-only {
         ol {
             width: 70%;
-            margin: auto;
+            @include centered-block;
             margin-top: 30px;
         }
     }
@@ -171,16 +175,33 @@ h2 {
 .restaurants {
     @include padding;
     background-color: rgba(247, 247, 246, 255);
+    @include tablet-only{
+        width: 100%; //mixin/variable 
+    }
+    @include desktop-only{
+        h2{
+            width: 100%; //mixin/variable 
+            margin-bottom: 30px; //mixin/variable 
+        }
+        border-radius: 30px 30px 0px 0px;
+        display: flex; //mixin/variable 
+        flex-wrap: wrap; //mixin/variable 
+        flex-direction: row; //mixin/variable 
+        justify-content: space-around; //mixin/variable 
+    }
 }
 
 .card {
-    width: 100%;
+    width: 100%; //mixin/variable 
     height: 250px;
-    background-color: white;
+    background-color: white; //mixin/variable 
     box-shadow: 0px 5px 20px rgb(187, 187, 187);
     border-radius: 15px;
-    margin-bottom: 40px;
-    position: relative;
+    margin-bottom: 20px;
+    position: relative; //mixin/variable 
+    @include desktop-only{
+        width: 40%;
+    }
 
     a {
         height: 100%;
@@ -258,9 +279,10 @@ h2 {
 
 .img-restaurant {
     background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 400px;
-    height: 250px;
+    height: 265px;
     overflow: hidden;
 
     @include tablet-only {
@@ -271,10 +293,10 @@ h2 {
 .menu {
     padding: 0px 25px;
     margin-top: -40px;
-    border-radius: 40px;
-    background-color: #ffffff;
+    border-radius: 30px; //mixin/variable
+    background-color: #ffffff; //mixin/variable
     &-container{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &-name-restaurant {
@@ -326,7 +348,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     h3 {
