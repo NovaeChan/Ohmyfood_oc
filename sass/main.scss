@@ -22,7 +22,7 @@ body {
 .container {
     width: 100%; //mixin/variable 
     background-color: #ffffff; //mixin/variable 
-    animation: loading 0ms $prog-bar-duration + $prog-bar-delay both;
+    //animation: loading 0ms $prog-bar-duration + $prog-bar-delay both;
 }
 
 h1 {
@@ -295,7 +295,7 @@ h2 {
     background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 }
 .le-delice-des-sens{
-    background-image: url('../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 }
 .la-palette-gout{
     background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
@@ -314,6 +314,21 @@ h2 {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+    }
+    @include tablet-only{
+        &-all{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-container{
+            margin-bottom: 30px;
+        }
+        &-main{
+            margin-top: 0px;
+            padding-bottom: 75px;
         }
     }
 
@@ -339,9 +354,6 @@ h2 {
         overflow: hidden;
         cursor: pointer;
         animation: loading-menu 2500ms 0ms both ease;
-        @include tablet-only{
-            width: 45%;
-        }
         &-description {
             width: 100%;
             display: flex;

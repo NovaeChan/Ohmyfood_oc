@@ -108,7 +108,6 @@ body {
 .container {
   width: 100%;
   background-color: #ffffff;
-  animation: loading 0ms 2500ms both;
 }
 
 h1 {
@@ -361,7 +360,7 @@ h2 {
 }
 
 .le-delice-des-sens {
-  background-image: url("../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 .la-palette-gout {
@@ -386,6 +385,21 @@ h2 {
     align-items: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .menu-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu-container {
+    margin-bottom: 30px;
+  }
+  .menu-main {
+    margin-top: 0px;
+    padding-bottom: 75px;
+  }
+}
 .menu-name-restaurant {
   padding: 25px 25px 25px 0px;
   display: flex;
@@ -406,11 +420,6 @@ h2 {
   overflow: hidden;
   cursor: pointer;
   animation: loading-menu 2500ms 0ms both ease;
-}
-@media screen and (min-width: 768px) {
-  .menu-card {
-    width: 45%;
-  }
 }
 .menu-card-description {
   width: 100%;
