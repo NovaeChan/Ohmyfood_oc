@@ -1,11 +1,11 @@
 @import './utils/variables.scss';
 @import './base/base';
+@import './base/typography';
 @import './components/buttons';
 @import './components/loading';
-@import './layouts/header.scss';
+@import './layouts/header';
 @import './layouts/footer';
-
-
+@import './pages/home';
 
 a {
     color: black;
@@ -14,20 +14,20 @@ a {
 
 body {
     @include centered-block;
-    width: 100%; //mixin/variable 
+    @include full-width;
     max-width: 986px;
     font-family: $font-text;
 }
 
 .container {
-    width: 100%; //mixin/variable 
-    background-color: #ffffff; //mixin/variable 
-    //animation: loading 0ms $prog-bar-duration + $prog-bar-delay both;
+    @include full-width;
+    @include bg-white;
+    animation: loading 0ms $prog-bar-duration + $prog-bar-delay both;
 }
 
 h1 {
     font-family: $font-title;
-    text-align: center; //mixin/variable 
+    @include text-center;
 }
 
 h2 {
@@ -37,139 +37,8 @@ h2 {
     font-size: 25px; //mixin/variable 
 }
 
-
-.city {
-    height: 50px;
-    width: 100%; //mixin/variable 
-    background-color: rgba(235, 235, 234, 255); //mixin/variable 
-    margin-top: 2px;
-    color: rgb(53, 53, 53);
-    display: flex; //mixin/variable 
-    justify-content: center; //mixin/variable 
-    align-items: center; //mixin/variable 
-    font-weight: 700; //mixin/variable 
-
-    &-search {
-        display: inline-flex; //mixin/variable 
-        text-align: center; //mixin/variable 
-    }
-
-    &-search-input {
-        background-color: rgba(235, 235, 234, 255); //mixin/variable 
-        border: none;
-        font-weight: 700; //mixin/variable 
-        font-size: 17px; //mixin/variable 
-        text-align: center; //mixin/variable 
-        width: 150px;
-
-        &::placeholder {
-            color: lighten(black, 20);
-        }
-    }
-}
-
 .fa-solid {
     padding: 5px;
-}
-
-.infos {
-    background-color: rgba(247, 247, 246, 255); // variable/mixin
-    padding: 20px 25px;
-    display: flex; //mixin/variable 
-    flex-wrap: wrap; //mixin/variable 
-    justify-content: center; //mixin/variable 
-    align-items: center; //mixin/variable 
-    text-align: center; //mixin/variable 
-    @include centered-block;
-    @include desktop-only{
-        border-radius: 0px 0px 30px 30px;
-    }
-    h2 {
-        font-size: 20px;
-        padding: 0px 30px 0px 30px ;
-    }
-
-    p {
-        font-size: 17px; //mixin/variable 
-        font-weight: 200;
-        margin-bottom: $margin; //mixin/variable 
-    }
-
-    @include tablet-only {
-        flex-direction: column;
-    }
-}
-
-
-.guide {
-    @include padding;
-    margin-bottom: $medium-margin; //mixin/variable 
-    font-weight: 700; //mixin/variable 
-
-    ol {
-        margin-top: $medium-margin;
-        counter-reset: my-counter;
-        max-width: 100%;
-        list-style: none;
-        margin-left: 5px;
-    }
-
-    &-list li {
-        width: 100%; //mixin/variable 
-        padding: 20px; //mixin/variable 
-        counter-increment: my-counter;
-        position: relative; //mixin/variable 
-        background-color: rgba(247, 247, 246, 255); //mixin/variable 
-        border-radius: 20px; //mixin/variable 
-        box-shadow: rgba(114, 113, 113, 0.44) 2px 5px 8px 0px;
-        margin-bottom: 20px; //mixin/variable 
-        display: flex; //mixin/variable 
-        justify-content: space-around; //mixin/variable 
-    }
-
-    &-list li::before {
-        content: counter(my-counter);
-        background: $colour-primary;
-        border-radius: 50%;
-        width: $dot-ol-size;
-        height: $dot-ol-size;
-        color: white; //mixin/variable 
-        font-weight: 500;
-        position: absolute;
-        top: 10;
-        text-align: center; //mixin/variable 
-        line-height: $dot-ol-size;
-        font-size: 13px;
-        left: calc(-1 * $dot-ol-size + 9px);
-    }
-
-    &-list--active {
-        background-color: lighten($color: #9356DC, $amount: 35) !important;
-
-        .fa-solid {
-            color: $colour-primary !important;
-        }
-    }
-
-    &-list a {
-        width: 100%; //mixin/variable 
-        display: flex; //mixin/variable 
-        align-items: center; //mixin/variable 
-    }
-
-    &-list .fa-solid {
-        color: grey;
-        font-size: 19px;
-        margin-right: 20px;
-    }
-
-    @include tablet-only {
-        ol {
-            width: 70%;
-            @include centered-block;
-            margin-top: 30px;
-        }
-    }
 }
 
 .restaurants {
@@ -177,7 +46,7 @@ h2 {
     background-color: rgba(247, 247, 246, 255);
     @include tablet-only{
         h2{
-            width: 100%; //mixin/variable 
+            @include full-width;
             margin-bottom: 30px; //mixin/variable 
         }
         border-radius: 30px 30px 0px 0px;
@@ -185,12 +54,11 @@ h2 {
         flex-wrap: wrap; //mixin/variable 
         flex-direction: row; //mixin/variable 
         justify-content: space-around; //mixin/variable 
-        //width: 100%; //mixin/variable 
     }
 }
 
 .card {
-    width: 100%; //mixin/variable 
+    @include full-width;
     height: 250px;
     background-color: white; //mixin/variable 
     box-shadow: 0px 5px 20px rgb(187, 187, 187);
@@ -229,7 +97,7 @@ h2 {
 
         /*3*/
         img {
-            width: 100%;
+            @include full-width;
             position: absolute;
             top: 40%;
             left: 50%;
@@ -277,7 +145,6 @@ h2 {
 }
 
 .img-restaurant {
-    //background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 400px;
@@ -305,7 +172,7 @@ h2 {
     padding: 0px 25px;
     margin-top: -40px;
     border-radius: 30px; //mixin/variable
-    background-color: #ffffff; //mixin/variable
+    @include bg-white;
     &-container{
         margin-bottom: 30px;
         @include tablet-only{
@@ -340,11 +207,11 @@ h2 {
     }
 
     &-title-desc {
-        width: 100%;
+        @include full-width;
     }
 
     &-card {
-        width: 100%;
+        @include full-width;
         position: relative;
         height: 65px;
         border-radius: 15px;
@@ -355,7 +222,7 @@ h2 {
         cursor: pointer;
         animation: loading-menu 2500ms 0ms both ease;
         &-description {
-            width: 100%;
+            @include full-width;
             display: flex;
             justify-content: space-between;
         }
