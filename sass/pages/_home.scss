@@ -91,7 +91,7 @@
         color: white; //mixin/variable 
         font-weight: 500;
         position: absolute;
-        top: 10;
+        // top: 10;
         @include text-center;
         line-height: $dot-ol-size;
         font-size: 13px;

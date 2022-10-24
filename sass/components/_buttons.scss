@@ -5,7 +5,7 @@ button {
     color: rgb(255, 255, 255);
     padding: 15px 20px;
     border-radius: 35px;
-    background-image: linear-gradient($colour-secondary 0%, $colour-primary 95%, $colour-primary 100%);
+    background-image: linear-gradient($colour-secondary 0%, $colour-primary 100%);
     box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 8px 0px;
     border: 0px solid rgb(28, 110, 164);
     display: inline-block;
@@ -26,7 +26,7 @@ button {
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: linear-gradient(lighten($colour-secondary, 5%), lighten($colour-primary, 5%), lighten($colour-primary, 5%));
+        background-image: linear-gradient(lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
         opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
