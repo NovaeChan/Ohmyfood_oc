@@ -58,7 +58,7 @@ button::after {
 
 header {
   height: 55px;
-  box-shadow: 4px 3px 5px rgb(182, 182, 182);
+  box-shadow: 1px 1px 4px rgb(146, 146, 146);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,8 +341,8 @@ h2 {
 .img-restaurant {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 215px;
+  background-size: cover;
+  min-height: 225px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -435,6 +435,11 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu-card h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu-card-select {
   width: 0px;
 }
@@ -479,6 +484,12 @@ h2 {
   animation: card-hover-desc 1000ms ease;
   animation-fill-mode: both;
 }
+@media (max-width: 335px) {
+  .menu-card:hover > .menu-title-desc {
+    animation: card-hover-desc-small 1000ms ease;
+    animation-fill-mode: both;
+  }
+}
 .menu .fa-circle-check {
   color: white;
   font-size: 22px;
@@ -513,10 +524,15 @@ h2 {
 }
 @keyframes card-hover-desc {
   0% {
-    width: 99%;
+    width: 100%;
   }
   100% {
     width: 80%;
+  }
+}
+@keyframes card-hover-desc-small {
+  100% {
+    width: 75%;
   }
 }
 @keyframes spin {
