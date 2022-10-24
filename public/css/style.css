@@ -436,9 +436,11 @@ h2 {
   text-overflow: ellipsis;
 }
 .menu-card h4 {
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 5px;
 }
 .menu-card-select {
   width: 0px;
@@ -455,9 +457,6 @@ h2 {
   font-weight: 400;
   border-bottom: 3px solid #99E2D0;
   width: 50px;
-}
-.menu h4 {
-  margin-bottom: 5px;
 }
 .menu-card-select {
   position: absolute;
@@ -532,7 +531,7 @@ h2 {
 }
 @keyframes card-hover-desc-small {
   100% {
-    width: 75%;
+    width: 70%;
   }
 }
 @keyframes spin {

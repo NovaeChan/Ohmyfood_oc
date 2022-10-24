@@ -247,9 +247,11 @@ h2 {
         }
 
         h4 {
+            width: 90%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            margin-bottom: 5px;
         }
 
         &-select {
@@ -272,9 +274,9 @@ h2 {
         width: 50px;
     }
 
-    h4 {
-        margin-bottom: 5px;
-    }
+    // h4 {
+    //     margin-bottom: 5px;
+    // }
 
     &-card-select {
         position: absolute;
@@ -369,7 +371,7 @@ h2 {
 
 @keyframes card-hover-desc-small {
     100% {
-        width: 75%;
+        width: 70%;
     }
 }
 
