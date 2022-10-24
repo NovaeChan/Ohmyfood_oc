@@ -24,9 +24,7 @@ body {
     @include bg-white;
     animation: loading 0ms $loading-duration both;
 }
-h1, h2 {
-    font-family: $font-title;
-}
+
 
 h1 {
     font-family: $font-title;
@@ -178,7 +176,9 @@ h2 {
     margin-top: -40px;
     border-radius: 30px;
     @include bg-white;
-
+    h2 {
+        font-family: $font-title;
+    }
     &-container {
         margin-bottom: 30px;
 

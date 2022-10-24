@@ -230,10 +230,6 @@ body {
   animation: loading 0ms 2000ms both;
 }
 
-h1, h2 {
-  font-family: "Shrikhand", cursive;
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -376,6 +372,9 @@ h2 {
   margin-top: -40px;
   border-radius: 30px;
   background-color: #ffffff;
+}
+.menu h2 {
+  font-family: "Shrikhand", cursive;
 }
 .menu-container {
   margin-bottom: 30px;
