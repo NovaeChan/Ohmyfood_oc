@@ -24,6 +24,9 @@ body {
     @include bg-white;
     animation: loading 0ms $loading-duration both;
 }
+h1, h2 {
+    font-family: $font-title;
+}
 
 h1 {
     font-family: $font-title;
